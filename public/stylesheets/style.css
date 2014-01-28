@@ -27,12 +27,12 @@ body {
   opacity: 0.9;
 }
 .social-box {
-  margin-left: 10%;
-  width: 40%;
+  width: 50%;
   float: left;
   padding-top: 33px;
   font-family: 'Shadows Into Light', cursive;
   font-size: 30px;
+  text-align: center;
   text-transform: uppercase;
 }
 .social-box a:first-child {
@@ -44,11 +44,11 @@ body {
   opacity: 0.7;
 }
 .countdown.styled {
-  margin-left: 10%;
-  width: 40%;
+  width: 50%;
   float: left;
   padding-top: 33px;
   font-family: 'Oswald', sans-serif;
+  text-align: center;
 }
 .countdown.styled div {
   display: inline-block;
