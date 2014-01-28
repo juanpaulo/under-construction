@@ -1,37 +1,60 @@
-html {
-  background: url("http://farm9.staticflickr.com/8249/8636833036_c7da03bdda_b.jpg") no-repeat center center fixed;
+body {
+  background: url("http://farm8.staticflickr.com/7033/6668797013_bb1dc44269_b.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  margin: 0;
   color: #fff;
 }
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+.empty-box {
+  height: 330px;
 }
-.text {
-  width: 100%;
-  height: 100px;
-  margin-top: -250px;
+.first-line {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
   text-align: center;
 }
+.first-line span {
+  color: #ffdc00;
+}
+.dark-box {
+  height: 170px;
+  width: 100%;
+  background-color: #111;
+  opacity: 0.9;
+}
+.social-box {
+  margin-left: 10%;
+  width: 40%;
+  float: left;
+  padding-top: 33px;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.social-box a:first-child {
+  margin-left: 20px;
+}
+.social-box i {
+  padding: 27px 7px;
+  color: #fff;
+  opacity: 0.7;
+}
 .countdown.styled {
-  height: 150px;
-  width: 300px;
-  margin-top: 0px;
-  margin-left: -150px;
+  margin-left: 10%;
+  width: 40%;
+  float: left;
+  padding-top: 33px;
+  font-family: 'Oswald', sans-serif;
 }
 .countdown.styled div {
   display: inline-block;
-  margin-left: 10px;
-  font-size: 40px;
-  font-weight: 100;
+  margin-left: 20px;
+  font-size: 80px;
+  font-weight: 400;
   line-height: 1;
   text-align: right;
 }
@@ -39,17 +62,8 @@ body {
   display: block;
   border-top: 1px solid #fff;
   padding-top: 3px;
-  font-size: 16px;
-  font-weight: normal;
-  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 300;
   text-align: left;
-}
-div.transbox {
-  position: absolute;
-  background-color: #242424;
-  opacity: 0.2;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  z-index: 1;
+  text-transform: uppercase;
 }
