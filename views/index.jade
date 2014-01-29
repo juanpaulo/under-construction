@@ -1,30 +1,28 @@
 extends layout
 
-mixin sns_link(link_address, icon_class)
-  a(href= link_address target="_blank")
-    i.fa.fa-lg(class= icon_class)
+mixin snsLink(url, iconClass)
+  a(href= url target="_blank")
+    span.fa-stack.fa-lg
+      i.fa.fa-circle.fa-stack-2x
+      i(class= iconClass).fa.fa-stack-1x.fa-inverse
 
 block content
-  div.empty-box
-  div.first-line
-    p juanpaulogutierrez
-      span .com
-  div.dark-box
-    div.social-box
-      | Launching soon!
-      +sns_link("https://www.facebook.com/juanpaulogutierrez", "fa-facebook-square")
-      +sns_link("https://plus.google.com/+JuanPauloGutierrez/about", "fa-google-plus-square")
-      +sns_link("http://jp.linkedin.com/pub/juan-paulo-gutierrez/2b/b06/284/", "fa-linkedin-square")
-      +sns_link("https://github.com/juanpaulo", "fa-github-square")
-      +sns_link("https://twitter.com/jp_gutierrez17", "fa-twitter-square")
-      +sns_link("http://www.flickr.com/photos/juan_paulo/", "fa-flickr")
-      +sns_link("http://instagram.com/juanpaulo", "fa-instagram")
-    div.countdown.styled
-  script(type='text/javascript').
-    $('.countdown.styled').countdown({
-      date: "April 13, 2014 00:00:00",
-      render: function(data) {
-        $(this.el).html("<div>" + this.leadingZeros(data.days, 2) + " <span>days</span></div><div>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div><div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div><div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
-      }
-    });
-
+  div.container
+    div.first-line
+      h1= domain
+        span= tld
+    div.dark-box
+      div.message-box
+        h1= message
+      div.sns-links-box
+         - snsLinks.forEach(function(entry) {
+          +snsLink(entry.url, entry.iconClass)
+         - });
+      div.countdown.styled
+      script(type='text/javascript').
+        $('.countdown.styled').countdown({
+          date: "April 17, 2014 00:00:00", //FIXME
+          render: function(data) {
+            $(this.el).html("<div>" + this.leadingZeros(data.days, 2) + " <span>days</span></div><div>" + this.leadingZeros(data.hours, 2) + " <span>hrs</span></div><div>" + this.leadingZeros(data.min, 2) + " <span>min</span></div><div>" + this.leadingZeros(data.sec, 2) + " <span>sec</span></div>");
+          }
+        });
