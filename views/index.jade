@@ -15,9 +15,8 @@ block content
       div.message-box
         h1= message
       div.sns-links-box
-         - snsLinks.forEach(function(entry) {
-          +snsLink(entry.url, entry.iconClass)
-         - });
+        each snsLink in snsLinks
+          +snsLink(snsLink.url, snsLink.iconClass)
       div.countdown.styled
       script(type='text/javascript').
         $('.countdown.styled').countdown({
