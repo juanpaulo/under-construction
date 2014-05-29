@@ -5,10 +5,10 @@
 
 exports.index = function(req, res){
   var info = {
-    title: 'juanpaulogutierrez.com',
+    title: 'juanpaulo.me',
     backgroundUrl: 'http://farm8.staticflickr.com/7033/6668797013_bb1dc44269_b.jpg',
-    domain: 'juanpaulogutierrez',
-    tld: '.com',
+    domain: 'juanpaulo',
+    tld: '.me',
     message: 'Launching soon!',
     snsLinks: [
       { url: "http://www.facebook.com/juanpaulogutierrez", iconClass: "fa-facebook" },
@@ -19,7 +19,7 @@ exports.index = function(req, res){
       { url: "http://www.flickr.com/photos/juan_paulo/", iconClass: "fa-flickr" },
       { url: "http://instagram.com/juanpaulo", iconClass: "fa-instagram" }
     ],
-    launchDate: 'April 17, 2014 00:00:00'
+    // launchDate: 'April 17, 2014 00:00:00'
   }
   res.render('index', info);
 };
